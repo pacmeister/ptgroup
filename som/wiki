@@ -34,6 +34,10 @@ source ~/tensorflow/bin/activate
 cd /path/to/som.py
 python /path/to/analysis.py
 
+# you may need to change some of the environment paths, just copy the bashrc
+cat bashrc >> ~/.bashrc
+
+# install the CLAS libraries
 
 Comment: Trained map rotation happens from training on the same data points, not different
 

@@ -20,11 +20,15 @@ print(str(datetime.datetime.now())) # Print time, useful for determining how lon
 sig = np.array(sigroot.tolist()) # convert to np array
 np.random.shuffle(sig)
 sig2 = sig
+backupsig = sig2
 sig = sig[:10000,:] # cut the np array to preferred size
 flag_sig = sig[:,35] # array of ones for signal, flags each event as signal
 sig = sig[:,[24,25,26,29,30,31,32,34]] # cuts the signal array to only include variables you want to train on
 ### PREPARE THE BACKGROUND ARRAY ###
 bg = np.array(bgroot.tolist()) # convert to np array
+np.random.shuffle(bg)
+bg2 = bg
+backupbg = bg2
 bg = bg[:10000,:] # cut the np array to preferred size
 flag_bg = bg[:,35] # array of zeros for background, flags each event as background 
 bg = bg[:,[24,25,26,29,30,31,32,34]] # cuts the background array to only include variables you want to train on
