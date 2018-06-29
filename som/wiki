@@ -1,10 +1,10 @@
 2018-06-27
 ##### INSTALLATION #####
-Unfortunately CERN ROOT doesn't work very well with Python3 right now.
-The -Dpython3=ON flag doesn't work, and apparently there are still some issues with it.
-Theoretically you could try compiling with -DPYTHON_EXECUTABLE=/path/to/python3 to get it to work, if you are adventurous.
-However, it is easier to just use Python2
-What to do?
+# Unfortunately CERN ROOT doesn't work very well with Python3 right now.
+# The -Dpython3=ON flag doesn't work, and apparently there are still some issues with it.
+# Theoretically you could try compiling with -DPYTHON_EXECUTABLE=/path/to/python3 to get it to work, if you are adventurous.
+# However, it is easier to just use Python2
+# What to do?
 
 ### Install Python and libraries
 sudo yum install python python2-pip python-devel python-virtualenv
@@ -39,5 +39,12 @@ cat bashrc >> ~/.bashrc
 
 # install the CLAS libraries
 
-Comment: Trained map rotation happens from training on the same data points, not different
+# generate the events, see example input file for details
+# run the script
+# you may need to edit these scripts based on your system/needs
+python multi.py
+
+# make basic kinematic cuts and get the events we want
+bash dat.sh
+
 
